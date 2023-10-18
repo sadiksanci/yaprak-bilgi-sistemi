@@ -112,12 +112,8 @@
         </div><br> <br>
         <div class="row">
           <div class="col-8">
+         
           <h2>Yaprak Türleri</h2> <br>
-            <p class="h6"> &nbsp;&nbsp;
-              <?php echo $deger2->baslik2 ?>
-
-            </p>
-           
             <div class="card-group">
               <div class="card">
                 <img src="foto/<?php echo $tur1->turRESİM ?>" class="card-img-top" alt="...">
@@ -172,6 +168,11 @@
 
         <div class="row">
           <div class="col-md-8">
+       
+            <p class="h2"> &nbsp;&nbsp;
+              <?php echo $deger2->baslik2 ?>
+
+            </p>
 
             <br>
             <p>&nbsp;&nbsp;
@@ -199,19 +200,17 @@
           ?>
           
 
-            <div class="col-md-4">
-                  <div class="card" style="width: 18rem; ">
-                              <a class="no-underline"  href="detay.php?ID=<?php echo  $son->yaprakID ?>" class="a">
-                                <img src="<?php echo  $son->yaprakURL1 ?>" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <p class="card-text">
-                                  <h4> <?php echo   $son->yaprakAD ?></h4> 
-                                  <?php  echo substr($son->yaprakÖnBilgi , 0, 200) ?>
-                                </p>
-                                </div>
-                              </a>
-                            </div>
-                  </div>
+          <div class="col-md-4 mt-5">
+                <div class="card">
+                    <a class="no-underline" href="detay.php?ID=<?php echo $son->yaprakID ?>" class="a">
+                        <img src="<?php echo $son->yaprakURL1 ?>" class="card-img-top" alt="...">
+                    </a>
+                    <div class="card-body">
+                        <h4 class="card-title"><?php echo $son->yaprakAD ?></h4>
+                        <p class="card-text"><?php echo substr($son->yaprakÖnBilgi, 0, 200) ?></p>
+                    </div>
+                </div>
+            </div>
 
           <?php } ?>
      
